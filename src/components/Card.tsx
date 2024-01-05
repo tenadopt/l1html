@@ -1,9 +1,10 @@
 import styled from "styled-components";
+import myImage from "./picture.svg"
 
 export function Card() {
     return (
         <Area>
-            <Image src="https://images.app.goo.gl/Y3XvmLNuMC6NZj1D7" alt="It should be beatiful img"/>
+            <Image src={myImage} alt="Description"/>
             <Header>Headline</Header>
             <Form>
                 <TextArea>Faucibus. Faucibus. Sit sit sapien tempusrisu ut. Sit molestie ornare in venen.</TextArea>
