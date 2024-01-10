@@ -1,15 +1,17 @@
 import './App.css';
 import styled from 'styled-components';
-import {Card} from "./components/Card";
+import Card from "./components/Card";
+import go from "./assets/img/go.png"
+import pth from "./assets/img/python.png"
+import ln from "./assets/img/picture.png"
 
 
 function App() {
     return (
         <div className="App">
-
-                <Card/>
-                <Card/>
-                <Card/>
+                <Card src={go} headerText="h1" bodyText="Hello"/>
+                <Card src={pth} headerText="2h1" bodyText="Faucibus. Faucibus. Sit sit sapien tempusrisu ut. Sit molestie ornare in venen."/>
+                <Card src={ln} headerText="3h1" bodyText="Hello123"/>
         </div>
     );
 }

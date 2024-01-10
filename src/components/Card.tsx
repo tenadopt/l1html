@@ -1,15 +1,21 @@
 import styled, {css} from "styled-components";
-import myImage from "../assets/img/picture.png"
 
-export function Card() {
+
+type CardsType = {
+    src: string,
+    headerText: string,
+    bodyText: string,
+}
+
+const Card = (props: CardsType)=> {
     return (
         <StyledCard>
             <ImgWrap>
-                <Image src={myImage} alt="Description"/>
+                <Image src={props.src} alt="Description"/>
             </ImgWrap>
             <Content>
-                <Title>Headline</Title>
-                <Text>Faucibus. Faucibus. Sit sit sapien tempusrisu ut. Sit molestie ornare in venen.</Text>
+                <Title>{props.headerText}</Title>
+                <Text>{props.bodyText}</Text>
                 <BtnsWrapper>
                     <SuperBtn btnType="primary">Save</SuperBtn>
                     <SuperBtn btnType="secondary">Overview</SuperBtn>
@@ -19,6 +25,8 @@ export function Card() {
     )
 
 }
+
+export default Card
 
 const StyledCard = styled.div`
   max-width: 300px;
